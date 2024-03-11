@@ -1,14 +1,82 @@
 @media screen and (min-width: 768px) {
 
+    /*** LAYOUT ********************/
+    /*******************************/
+
+
+    /*** MAIN ********************/
+    /*****************************/
+
+    /*** PROFILES ********************/
+
+    #profiles {
+        display: block;
+    }
+
+    #profiles header {
+        width: var(--headers-h);
+        border-right: 1px solid var(--grey);
+    }
+
+    #profiles ul {
+        height: calc( 100vh - var(--headers-h));
+    }
+
+    /*** CHAT ********************/
+
+    #profiles header {
+        display: flex;
+    }
+
+    #chat {
+        width: calc(100% - var(--headers-h));
+    }
+
+
 }
 
 @media screen and (min-width: 992px) {
-    
+
+    /*** LAYOUT ********************/
+    /*******************************/
+
+
+    /*** MAIN ********************/
+    /*****************************/
+
     main {
-        width: 100%;
+        width: 90%;
         height: 94vh;
         margin: 3vh auto 3vh;
         max-width: 1000px;
+    }
+
+    /*** PROFILES ********************/
+
+    #profiles {
+        width: 25%;
+    }
+
+    #profiles header {
+        width: 100%;
+    }
+
+    #profiles ul {
+        height: calc( 94vh - var(--headers-h));
+    }
+
+    .chat-preview {
+        display: flex;
+    }
+
+    /*** CHAT ********************/
+
+    #chat {
+        width: 75%;
+    }
+
+    #display {
+        height: calc(100vh - 2 * var(--headers-h) - 6vh);
     }
 
 }

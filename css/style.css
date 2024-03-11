@@ -13,7 +13,7 @@
     --green: rgba(0, 150, 136, 1);
     --beige: rgba(219, 219, 210, 1);
 
-    --headers-h: 4rem;
+    --headers-h: 10vh;
 
     --gap-p: calc(20px);
 }
@@ -56,14 +56,14 @@ button {
 /*******************************/
 
 body{
-    width: 100%;
-    height: 100vh;
     background: linear-gradient(to top,
-     rgba(219, 219, 210, 1) 0%,
-     rgba(219, 219, 210, 1) 90%,
-     rgba(0, 150, 136, 1) 90%,
-     rgba(0, 150, 136, 1) 100%);
-  }
+    rgba(219, 219, 210, 1) 0%,
+    rgba(219, 219, 210, 1) 90%,
+    rgba(0, 150, 136, 1) 90%,
+    rgba(0, 150, 136, 1) 100%);
+
+    font-family: sans-serif;
+}
 
 /* Flex-container ********************/
 
@@ -102,6 +102,13 @@ body{
 /*** LAYOUT ********************/
 /*******************************/
 
+header {
+    align-items: center;
+    width: 100%;
+    height: var(--headers-h);
+    background-color: var(--offwhite);
+    padding: 1.5vh;
+}
 
 /*** UTILITIES ********************/
 /**********************************/
@@ -121,18 +128,19 @@ body{
 /* Typography ********************/
 
 .txt-0 {
-    font-size: calc(.5vw + .5rem);
+    font-size: calc(.1vw + .6rem);
     font-weight: 100;
 }
 
 .txt-1 {
-    font-size: calc(.5vw + .7rem);
-    line-height: calc(.5vw + 1.2rem);
+    font-size: calc(.2vw + .6rem);
+    line-height: calc(.1vw + .6rem);
 }
 
 .txt-h2 {
-    font-size: calc(.5vw + 1.4rem);
-    line-height: calc(.5vw + 1.8rem);
+    font-size: calc(.3vw + .8rem);
+    line-height: calc(.4vw + 1.4rem);
+    font-weight: 100;
 }
 
 /*** Colors ********************/
@@ -167,14 +175,87 @@ body{
 /*****************************/
 
 main {
+    display: flex;
     width: 100%;
     height: 100vh;
 
     /* debug */
-    border: 5px solid brown;
+    /* border: 5px solid brown; */
 }
 
 /*** Profiles Section ********************/
 
+#profiles {
+    display: none;
+}
+
+#profiles ul {
+    height: calc( 94vh - var(--headers-h));
+    overflow: scroll;
+
+    /* Debug */
+    /* border: 1px solid black; */
+}
+
+#profiles li {
+    display: flex;
+    align-items: center;
+    padding: 1.5vh;
+    border-top: 1px solid var(--offwhite);
+}
+
+#profiles img {
+    display: block;
+    width: calc(var(--headers-h) - 3vh);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.chat-preview {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    padding-left: 1.5vh;
+}
+
+.chat-preview div {
+    overflow-y:visible;
+}
+
+.chat-preview span {
+    justify-self: end;
+}
 
 /*** Chat Section ********************/
+
+#chat {
+    width: 100%;
+}
+
+#chat img {
+    display: block;
+    width: calc(var(--headers-h) - 3vh);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 1.5vh;
+}
+
+#chat header div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+#display {
+    width: 100%;
+    height: calc(100vh - 2 * var(--headers-h));
+    background-image: url(../img/mine.jpg);
+}
+
+#typing {
+    width: 100%;
+    height: var(--headers-h);
+    background-color: var(--offwhite);
+}
+
