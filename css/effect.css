@@ -14,12 +14,12 @@ header button:hover > i {
 
 #profiles li:hover {
     background-color: var(--offwhite);
-    border-top: 1px solid var(--white);    
+    border-top: 1px solid var(--white);
+    cursor: pointer;
 }
 
 #typing button:hover {
     background-color: var(--white);
-
 }
 
 #typing input:hover {
@@ -28,4 +28,13 @@ header button:hover > i {
 
 #profiles .search form:hover {
     border: 1px solid var(--grey);
+}
+
+#display .txt-box div div:hover .fa-chevron-down {
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+#display .txt-box div div:hover ul {
+    display: inline-block;
 }
