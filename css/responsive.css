@@ -44,10 +44,18 @@
     }
 
     #profiles ul {
-        height: calc( 94vh - var(--headers-h));
+        height: calc( 94vh - 2 * var(--headers-h) - 2/3 * var(--headers-h));
     }
 
     #profiles header div:last-child {
+        display: flex;
+    }
+
+    .notifications {
+        display: flex;
+    }
+
+    #profiles .search {
         display: flex;
     }
 
