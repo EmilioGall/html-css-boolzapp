@@ -23,6 +23,11 @@
     #chat header {
         border-left: 1px solid var(--grey);
     }
+
+    #display .txt-box {
+        max-width: 55%;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -71,6 +76,10 @@
 
     #display {
         height: calc(100vh - 2 * var(--headers-h) - 6vh);
+    }
+
+    #display .txt-box {
+        max-width: 60%;
     }
 
 }

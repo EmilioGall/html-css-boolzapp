@@ -12,3 +12,8 @@ header button:hover {
 header button:hover > i {
     color: var(--offwhite);
 }
+
+#profiles li:hover {
+    background-color: var(--offwhite);
+    border-top: 1px solid var(--white);    
+}

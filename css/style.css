@@ -13,6 +13,8 @@
     --green: rgba(0, 150, 136, 1);
     --beige: rgba(219, 219, 210, 1);
 
+    --lightgreen: rgba(213, 249, 186, 1);
+
     --headers-h: 60px;
     --icon-h: 40px;
 }
@@ -76,13 +78,13 @@ header button {
 /* Typography ********************/
 
 .txt-0 {
-    font-size: calc(.1vw + .6rem);
+    font-size: calc(.1vw + .5rem);
     font-weight: 100;
 }
 
 .txt-1 {
     font-size: calc(.2vw + .5rem);
-    line-height: calc(.1vw + .6rem);
+    line-height: calc(.2vw + .7rem);
 }
 
 .txt-h3 {
@@ -171,12 +173,16 @@ header {
     object-fit: contain;
 }
 
+/* Header - Profiles Section ********************/
+
 #profiles header div:last-child {
     display: none;
     align-items: center;
     gap: calc((var(--headers-h) - var(--icon-h)) / 5);
     margin-right: calc((var(--headers-h) - var(--icon-h)) / 2);
 }
+
+/* Notifications - Profiles Section ********************/
 
 .notifications {
     display: none;
@@ -201,6 +207,8 @@ header {
 .notifications button {
     text-decoration-line: underline;
 }
+
+/* Chats List - Profiles Section ********************/
 
 #profiles .search {
     display: none;
@@ -247,6 +255,8 @@ header {
 
 #chat {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #chat img {
@@ -257,6 +267,8 @@ header {
     object-fit: contain;
     margin-right: calc((var(--headers-h) - var(--icon-h)) / 2);
 }
+
+/*** Header - Chat Section ********************/
 
 #chat header div:first-child {
     display: flex;
@@ -270,11 +282,48 @@ header {
     margin-right: calc((var(--headers-h) - var(--icon-h)) / 2);
 }
 
+/*** Chat Display - Chat Section ********************/
+
 #display {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: calc(100vh - 2 * var(--headers-h));
     background-image: url(../img/mine.jpg);
+    padding: calc(.5 * var(--icon-h)) calc(1.5 * var(--icon-h));
+    overflow: scroll;
 }
+
+#display .txt-box {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#display .txt-box p {
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+#display .txt-box div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#display .sent {
+    align-self: flex-end;
+    background-color: var(--lightgreen); 
+}
+
+#display .received {
+    background-color: var(--white); 
+}
+
+/*** Typing Box - Chat Section ********************/
 
 #typing {
     width: 100%;
