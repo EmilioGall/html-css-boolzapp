@@ -47,6 +47,10 @@
         height: calc( 94vh - var(--headers-h));
     }
 
+    #profiles header div:last-child {
+        display: flex;
+    }
+
     .chat-preview {
         display: flex;
     }

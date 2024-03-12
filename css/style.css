@@ -64,8 +64,16 @@ body{
     font-family: sans-serif;
 }
 
+header button {
+    width: var(--icon-h);
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
 /*** UTILITIES ********************/
 /**********************************/
+
+.m-l-i
 
 /* Typography ********************/
 
@@ -125,6 +133,7 @@ main {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: var(--headers-h);
     background-color: var(--offwhite);
@@ -158,6 +167,17 @@ header {
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: contain;
+}
+
+#profiles header div:last-child {
+    display: none;
+    align-items: center;
+    gap: calc(
+        (var(--headers-h) - var(--icon-h))
+        / 5);
+    margin-right: calc(
+        (var(--headers-h) - var(--icon-h))
+        / 2);
 }
 
 .chat-preview {
@@ -195,6 +215,17 @@ header {
 #chat header div:first-child {
     display: flex;
     align-items: center;
+}
+
+#chat header div + div:last-child {
+    display: flex;
+    align-items: center;
+    gap: calc(
+        (var(--headers-h) - var(--icon-h))
+        / 5);
+    margin-right: calc(
+        (var(--headers-h) - var(--icon-h))
+        / 2);
 }
 
 #display {

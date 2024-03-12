@@ -1,0 +1,14 @@
+/*** COMMON ********************/
+/*******************************/
+
+/*** MAIN ********************/
+/*******************************/
+
+header button:hover {
+    color: var(--white);
+    background-color: var(--grey);
+}
+
+header button:hover > i {
+    color: var(--offwhite);
+}
