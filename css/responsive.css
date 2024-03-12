@@ -28,6 +28,10 @@
         max-width: 55%;
     }
 
+    #typing div {
+        display: flex;
+    }
+
 }
 
 @media screen and (min-width: 992px) {

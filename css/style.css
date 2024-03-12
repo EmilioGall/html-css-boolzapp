@@ -190,7 +190,6 @@ header {
     height: var(--headers-h);
     background-color: var(--lightcyan);
     padding: calc((var(--headers-h) - var(--icon-h)) / 2);
-
 }
 
 .notifications div:first-child {
@@ -226,14 +225,13 @@ header {
     flex-grow: 1;
     background-color: var(--white);
     border-radius: 3px;
-    border: 1px solid var(--grey);
+    border: 1px solid var(--white);
     padding: 2px 5px;
 }
 
 #profiles .search input {
     border: none;
     flex-grow: 1;
-
 }
 
 .chat-preview {
@@ -330,5 +328,29 @@ header {
     min-height: var(--headers-h);
     max-height: calc(2 * var(--headers-h));
     background-color: var(--offwhite);
+    padding: calc((var(--headers-h) - var(--icon-h)) / 2);
+    display: flex;
+    justify-content: space-between;
+    gap: calc((var(--headers-h) - var(--icon-h)) / 2);
+    align-items: center;
 }
 
+#typing div {
+    display: none;
+    aspect-ratio: 1;
+}
+
+#typing button {
+    display: block;
+    width: var(--icon-h);
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+#typing input {
+    flex-grow: 1;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid var(--white);
+    padding: 2px 5px;
+}

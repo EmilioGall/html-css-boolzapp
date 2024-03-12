@@ -5,15 +5,27 @@
 /*******************************/
 
 header button:hover {
-    color: var(--white);
-    background-color: var(--grey);
+    background-color: var(--white);
 }
 
 header button:hover > i {
-    color: var(--offwhite);
+    color: var(--grey);
 }
 
 #profiles li:hover {
     background-color: var(--offwhite);
     border-top: 1px solid var(--white);    
+}
+
+#typing button:hover {
+    background-color: var(--white);
+
+}
+
+#typing input:hover {
+    border: 1px solid var(--grey);
+}
+
+#profiles .search form:hover {
+    border: 1px solid var(--grey);
 }
