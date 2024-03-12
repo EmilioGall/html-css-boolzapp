@@ -3,19 +3,11 @@
     /*** LAYOUT ********************/
     /*******************************/
 
-
-    /*** MAIN ********************/
-    /*****************************/
-
     /*** PROFILES ********************/
 
     #profiles {
         display: block;
-    }
-
-    #profiles header {
         width: var(--headers-h);
-        border-right: 1px solid var(--grey);
     }
 
     #profiles ul {
@@ -24,15 +16,13 @@
 
     /*** CHAT ********************/
 
-    #profiles header {
-        display: flex;
-    }
-
     #chat {
         width: calc(100% - var(--headers-h));
     }
 
-
+    #chat header {
+        border-left: 1px solid var(--grey);
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -40,25 +30,17 @@
     /*** LAYOUT ********************/
     /*******************************/
 
-
-    /*** MAIN ********************/
-    /*****************************/
-
     main {
         width: 90%;
         height: 94vh;
-        margin: 3vh auto 3vh;
-        max-width: 1000px;
+        margin: 3vh auto;
+        max-width: 1200px;
     }
 
     /*** PROFILES ********************/
 
     #profiles {
         width: 25%;
-    }
-
-    #profiles header {
-        width: 100%;
     }
 
     #profiles ul {
