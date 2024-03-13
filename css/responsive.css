@@ -80,6 +80,7 @@
 
     #display {
         height: calc(100vh - 2 * var(--headers-h) - 6vh);
+        overflow-y: scroll;
     }
 
     #display .txt-box {
